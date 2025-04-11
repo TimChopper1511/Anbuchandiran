@@ -1,0 +1,102 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(to bottom right, #141e30, #243b55);
+  color: white;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 40px 20px;
+  transition: opacity 0.5s ease;
+}
+
+.container {
+  width: 100%;
+  max-width: 1000px;
+  text-align: center;
+}
+
+h1 {
+  font-size: 2.5rem;
+  margin-bottom: 40px;
+}
+
+.steps {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.step-link {
+  background: linear-gradient(45deg, #00c6ff, #0072ff);
+  color: white;
+  padding: 15px 30px;
+  border-radius: 40px;
+  text-decoration: none;
+  font-weight: bold;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  transition: all 0.3s ease;
+}
+
+.step-link:hover {
+  transform: scale(1.05);
+  background: linear-gradient(45deg, #0072ff, #00c6ff);
+}
+
+/* Page content styles for step pages */
+.step-content {
+  max-width: 800px;
+  text-align: center;
+  margin-top: 60px;
+  animation: fadeIn 0.8s ease-out;
+}
+
+.step-content h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.step-content p {
+  font-size: 1.2rem;
+  line-height: 1.8;
+}
+
+.back-btn {
+  margin-top: 40px;
+  display: inline-block;
+  text-decoration: none;
+  background: white;
+  color: #141e30;
+  padding: 10px 20px;
+  border-radius: 20px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.back-btn:hover {
+  background: #ddd;
+  transform: scale(1.05);
+}
+
+.fade-out {
+  opacity: 0;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
