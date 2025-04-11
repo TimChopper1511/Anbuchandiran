@@ -1,0 +1,88 @@
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: #16202A;
+  color: white;
+}
+
+.container {
+  text-align: center;
+  padding: 40px;
+}
+
+h1 {
+  font-size: 2.5rem;
+  margin-bottom: 40px;
+}
+
+.roadmap {
+  position: relative;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 20px 0;
+}
+
+.roadmap::before {
+  content: '';
+  position: absolute;
+  left: 50%;
+  top: 0;
+  transform: translateX(-50%);
+  width: 6px;
+  height: 100%;
+  background: linear-gradient(to bottom, #00c6ff, #0072ff);
+  border-radius: 3px;
+}
+
+.step {
+  position: relative;
+  width: 50%;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.step a {
+  display: inline-block;
+  padding: 15px 25px;
+  border-radius: 40px;
+  background: linear-gradient(to right, #00c6ff, #0072ff);
+  color: white;
+  font-weight: bold;
+  text-decoration: none;
+  transition: 0.3s ease;
+}
+
+.step a:hover {
+  transform: scale(1.05);
+}
+
+.step::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 20px;
+  height: 20px;
+  background: white;
+  border: 4px solid #0072ff;
+  border-radius: 50%;
+  z-index: 1;
+}
+
+.step.left {
+  left: 0;
+  text-align: right;
+}
+
+.step.left::after {
+  right: -10px;
+}
+
+.step.right {
+  left: 50%;
+  text-align: left;
+}
+
+.step.right::after {
+  left: -10px;
+}
